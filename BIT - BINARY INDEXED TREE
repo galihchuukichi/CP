@@ -1,0 +1,105 @@
+#include<bits/stdc++.h>
+#pragma GCC optimize("Ofast")
+namespace kewajiban {
+    using namespace std;
+    using ll = long long;
+    using ull = unsigned long long;
+    #define aku ios_base::sync_with_stdio(0);cout.tie(0);cin.tie(0); 
+    #define dqll(myV,a) deque<ll>myV(a)
+    #define dqll2D(myV,a,b) deque<deque<ll>> myV(a,deque<ll>(b))
+    #define pll pair<ll,ll>
+    #define mpll map<ll,ll>
+    #define fr first
+    #define sc second
+    //lower_bound >= x
+    //upper_bound > x
+    #define fup(i,a,b,c) for(ll i=a; i<=b; i+=c)
+    #define fdown(i,a,b,c) for(ll i=a; i>=b; i-=c)
+    #define sp cout<<" ";
+    #define pb emplace_back
+    #define pf emplace_front
+    #define pob pop_back
+    #define pof pop_front
+    #define gcd(a,b) __gcd(a,b)
+    #define lcm(a,b) (a*(b/gcd(a,b)))
+}
+using namespace kewajiban;
+template<typename T> inline void ctk(T lx){
+    std::cout << lx << endl;
+    return;
+}
+
+ll n,tc,t,x,y,tmp;
+string s;
+
+/*
+-> Tujuan {
+    - Berfungsi as PrefSum + More efisien
+}
+-> Button {
+    - update() : Update BIT for operation arr[index] += val;
+    - getSum() : returns sum of arr[0...index];
+}
+*/ // INFORMASI BIT - BINARY INDEXED TREE
+
+int getSum(int BIT[], int idx){
+    int sum=0; idx++;
+    while(idx>0){
+        sum+=BIT[idx];
+        idx -= idx & -idx; // idx & -idx = return nilai 1 terkecil pada biner
+    }
+    return sum;
+}
+
+void updateBIT(int BIT[], int n, int idx, int val){
+    idx++;
+    while(idx  <= n){
+        BIT[idx] += val;
+        idx += idx & -idx; // idx ditambah nilai 2^x, x = index 1 paling kanan pada biner idx
+        // idx = parent(idx)
+    }
+}
+
+int *buatBIT(int arr[], int n){
+    int *BIT = new int[n+1]; // 
+    fup(i,1,n,1) BIT[i]=0;
+    fup(i,0,n-1,1) updateBIT(BIT,n,i,arr[i]);
+    return BIT;
+}
+
+
+signed main(){
+    aku 
+    // cin >> tc;
+    tc=1;
+    while(tc--){
+        // cin>>n;
+        BITfunc();
+    }
+}
+
+
+    				
+/*
+INPUT
+
+void BITfunc(){
+    ll uk = 11;
+    ll BIT[uk+1] = {}, arr[uk] = {3,2,-1,6,5,4,-3,3,7,2,3}; // BIT +1 for dummy
+    
+    
+    
+    
+    
+} // BIT - BINARY INDEXED TREE
+
+    */
+
+
+
+
+
+
+
+
+
