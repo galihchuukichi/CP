@@ -83,15 +83,6 @@ signed main(){
 /*
 INPUT
 
-void BITfunc(){
-    ll uk = 11;
-    ll BIT[uk+1] = {}, arr[uk] = {3,2,-1,6,5,4,-3,3,7,2,3}; // BIT +1 for dummy
-    
-    
-    
-    
-    
-} // BIT - BINARY INDEXED TREE
 
     */
 
