@@ -69,13 +69,35 @@ int *buatBIT(int arr[], int n){
 
 
 signed main(){
-    aku 
-    // cin >> tc;
-    tc=1;
-    while(tc--){
-        // cin>>n;
-        BITfunc();
-    }
+    aku
+    
+    // Contoh array input
+    int arr[] = {1, 2, 3, 4, 5};
+
+    // Menghitung panjang array
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    // Membuat BIT dari array
+    int* BIT = buatBIT(arr, n);
+
+    // Mengambil jumlah elemen dari indeks 0 hingga indeks 2 (sudah termasuk elemen di indeks 2)
+    int sum1 = getSum(BIT, 2);
+    ctk(sum1);  // Output: 6
+
+    // Mengambil jumlah elemen dari indeks 0 hingga indeks 4 (sudah termasuk elemen di indeks 4)
+    int sum2 = getSum(BIT, 4);
+    ctk(sum2);  // Output: 15
+
+    // Menambahkan nilai 3 ke elemen di indeks 2
+    updateBIT(BIT, n, 2, 3);
+
+    // Mengambil jumlah elemen dari indeks 0 hingga indeks 2 (setelah penambahan nilai)
+    int sum3 = getSum(BIT, 2);
+    ctk(sum3);  // Output: 9
+
+    // Menghapus memori yang dialokasikan secara dinamis untuk BIT
+    delete[] BIT;
+    return 0;
 }
 
 
@@ -85,7 +107,6 @@ INPUT
 
 
     */
-
 
 
 
