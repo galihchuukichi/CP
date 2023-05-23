@@ -1,0 +1,78 @@
+/*
+// ################################################## VECTOR && DEQUE && ARRAY ##################################################
+dqll(myV,mySize);
+myV.reverse(v.begin(),v.end());
+
+myV = {1,2,3,4,5}
+myV.insert(myV.begin()+2,100);
+myV = {1,2,100,3,4,5}
+
+reverse(myV.begin(),myV.begin()+3); // asal : 1 2 3 4 5
+myV = {3, 2, 1, 4, 5}
+
+myV = {1,2,3,4,5};
+myV.erase(myV.begin()+1,myV.begin()+4);
+myV = {1,5}
+
+DEQUE ga bisa “myDq(5) = {1,2,3,4,5};
+Array JAUH LEBIH EFISIEN dibandingkan DEQUE dalam hal TIME COMPLEXITY & MEMORY
+
+void myF(vll& arr){} // harus pake & supaya nilainya juga berubah
+void printArray(int arr[], int size){} //without using ‘&’ langsung disimpen address nya jadinya langsung ganti
+
+Memset ga bisa dipake di vector
+Pake myVec.clear(); // ini mereset jadi size 0
+
+swap(a,b); // tuker nilai, bisa juga untuk array
+
+vector<vll> DP(505,vll(505,-1));
+//creates 2D vector with 505 x 505 size and initialized all element with -1
+
+vi A = {1,2,3,4,5};
+A.erase(A.begin()+2);
+A = {1,2,4,5};
+
+// Resize the vector to have 3 rows and 4 columns
+  vec2d.resize(3, std::vector<int>(4));
+
+vector<vector<int>> adj(5);
+Deque;
+Can access using [], deq.front(), deq.back(), deq.pop_back(), deq.pop_front();
+
+adj[4].pb(1);
+
+// ################################################## TUPLE ##################################################
+tuple<int, string, bool> myTuple(42, "hello", true);
+deque<tuple<ll,bool,string>> myDt;
+myDt.pb(23,1,”halo”);
+    cout << get<0>(myTuple) << endl;   // output: 42
+    cout << get<1>(myTuple) << endl;   // output: hello
+    cout << get<2>(myTuple) << endl;   // output: 1 (true)
+    
+    
+
+// ################################################## FUNGSI ##################################################
+void fungsi(int* arr){}; // simpen alamat
+myInput.clear(); // 80% NOT EFFICIENT
+
+void myF(vll& arr){} // harus pake & supaya nilainya juga berubah
+
+lower_bound >= x
+upper_bound > x
+
+auto it = lower_bound(v.begin(),v.end(),3)
+it == v.end() GA NEMU
+index = it-v.begin()+1 | value = *it
+
+LLONG_MAX | INT_MAX
+
+// ################################################## ERROR ##################################################
+for(ll i=0; i<=cari.size()-1; i++) cout<<i<<" "; // INI RTE
+for(ll i=0; i<=-1; i++) cout<<i<<” “; // INI AMAN
+
+
+
+
+
+
+
