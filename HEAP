@@ -1,0 +1,98 @@
+#include<bits/stdc++.h>
+#pragma GCC optimize("Ofast")
+namespace kewajiban {
+    using namespace std;
+    using ll = long long;
+    using ull = unsigned long long;
+    #define aku ios_base::sync_with_stdio(0);cout.tie(0);cin.tie(0); 
+    #define dqll(myV,a) deque<ll>myV(a)
+    #define dqll2D(myV,a,b) deque<deque<ll>> myV(a,deque<ll>(b))
+    #define pll pair<ll,ll>
+    #define mpll map<ll,ll>
+    #define fr first
+    #define sc second
+    //lower_bound >= x
+    //upper_bound > x
+    #define fup(i,a,b,c) for(ll i=a; i<=b; i+=c)
+    #define fdown(i,a,b,c) for(ll i=a; i>=b; i-=c)
+    #define sp cout<<" ";
+    #define pb emplace_back
+    #define pf emplace_front
+    #define pob pop_back
+    #define pof pop_front
+    #define gcd(a,b) __gcd(a,b)
+    #define lcm(a,b) (a*(b/gcd(a,b)))
+}
+using namespace kewajiban;
+template<typename T> inline void ctk(T lx){
+    std::cout << lx << endl;
+    return;
+}
+
+ll n,tc,t,x,y,tmp;
+int size;
+string s;
+
+int *arrHeap = new int[maxSize];
+void initHEAP(){size = 0;}
+int getParent(x){return (x-1)/2;}
+int getLeft(x) {return 2*x+1;}
+int getRight(x) {return 2*x+2;}
+
+void push(int val){
+    int i=size;
+    arrHeap[i] = val;
+    while(i>0 && arrHeap[i] > arrHeap[getParent(i)]){
+        swap(arrHeap[i], arrHeap[getParent(i)]);
+        i = getParent(i);
+    }
+    size++;
+}
+
+void pop(){
+    swap(arrHeap[0], arrHeap[size-1]);
+    size--;
+    int i=0; bool swapped = 1;
+    while(swapped){
+        int maxIdx = i;
+        if((getLeft(i) < size) && arrHeap[maxIdx] < arrHeap[getLeft(i)])
+            maxIdx = getLeft(i);
+        if((getRight(i) < size) && arrHeap[maxIdx] < arrHeap[getRight(i)])
+            maxIdx = getRight(i);
+        swap(arrHeap[i],arrHeap[maxIdx]);
+        swapped = maxIdx == i; // ragu bisa works
+        i = maxIdx;
+    }
+    
+    
+}
+int top(){
+    return arrHeap[0];}
+    
+void heap(int dep){
+    
+    
+}
+
+signed main(){
+    aku 
+    // cin >> tc;
+    tc=1;
+    while(tc--){
+        // cin>>n;
+        heap(0);
+    }
+}
+/*
+INPUT
+
+
+    */
+
+
+
+
+
+
+
+
