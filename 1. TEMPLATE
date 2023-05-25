@@ -24,7 +24,7 @@ namespace kewajiban {
     #define lcm(a,b) (a*(b/gcd(a,b)))
 }
 using namespace kewajiban;
-template<typename T> inline void ctk(T lx){
+template<typename T> inline void asd(T lx){
     std::cout << lx << endl;
     return;
 }
