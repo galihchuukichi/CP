@@ -69,6 +69,11 @@ index = it-v.begin()+1 | value = *it
 
 LLONG_MAX | INT_MAX
 
+    int a = 5;
+    int b = 2;
+    int ans = ceil(static_cast<double>(a) / b);
+    cout << ans;  // Output: 3
+    
 // ################################################## ERROR ##################################################
 for(ll i=0; i<=cari.size()-1; i++) cout<<i<<" "; // INI RTE
 for(ll i=0; i<=-1; i++) cout<<i<<” “; // INI AMAN
