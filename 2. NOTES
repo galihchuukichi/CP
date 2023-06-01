@@ -79,7 +79,8 @@ LLONG_MAX | INT_MAX
 for(ll i=0; i<=cari.size()-1; i++) cout<<i<<" "; // INI RTE
 for(ll i=0; i<=-1; i++) cout<<i<<” “; // INI AMAN
 
-
+unordered_set<pair<ll,ll>>mySetPair; // INI ERROR
+set<pair<ll,ll>>mySet; // INI AMAN
 
 
 
