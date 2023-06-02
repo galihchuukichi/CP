@@ -82,7 +82,9 @@ for(ll i=0; i<=-1; i++) cout<<i<<” “; // INI AMAN
 unordered_set<pair<ll,ll>>mySetPair; // INI ERROR
 set<pair<ll,ll>>mySet; // INI AMAN
 
-
+map<int,pair<int,int>>mp;
+if(mp[5].emtpy()) // ERROR
+if(mp.find(5) == mp.end()) // USE THIS, DONT WORRY IT'S O(log n) :)
 
 
 
