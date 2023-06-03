@@ -1,82 +1,46 @@
-// TROC 32 TOKI CONTEST PROBLEM E. BERLUT MAGNETIS
+// ELITE YELLOW #02 INTERACTIVE INPUT
 #include<bits/stdc++.h>
-#pragma GCC optimize("Ofast")
-namespace kewajiban {
-    using namespace std;
-    using ll = long long;
-    using ull = unsigned long long;
-    #define aku ios_base::sync_with_stdio(0);cout.tie(0);cin.tie(0); 
-    #define dqll(myV,a) deque<ll>myV(a)
-    #define dqll2D(myV,a,b) deque<deque<ll>> myV(a,deque<ll>(b))
-    #define pll pair<ll,ll>
-    #define mpll map<ll,ll>
-    #define fr first
-    #define sc second
-    //lower_bound >= x
-    //upper_bound > x
-    #define fup(i,a,b,c) for(ll i=a; i<=b; i+=c)
-    #define fdown(i,a,b,c) for(ll i=a; i>=b; i-=c)
-    #define sp cout<<" ";
-    #define pb emplace_back
-    #define pf emplace_front
-    #define pob pop_back
-    #define pof pop_front
-    #define gcd(a,b) __gcd(a,b)
-    #define lcm(a,b) (a*(b/gcd(a,b)))
-}
-using namespace kewajiban;
-template<typename T> inline void asd(T lx){
-    std::cout << lx << endl;
-    return;
-}
-
-ll n,d1,d2,tc,t,x,y,tmp;
-string s;
-
+using namespace std;
 using ll = long long;
-void solve(int dep){
-    cin>>n>>d1>>d2;
-    vector<ll>a(n+3); vector<vector<ll>>dp(n+3,vector<ll>(2));
-    for(int i=1; i<=n; i++){
-        cin>>a[i];
-        dp[i][0] = max(dp[i-1][0], dp[i-1][1]);
-        dp[i][1] = max(dp[i-1][0], dp[i-1][1]) + d2*a[i]-d1;
-        
-        cout<<"##### i : "<<i<<" #####\n";
-        cout<<"dp["<<i<<"][0] : "<<dp[i][0]<<endl;
-        cout<<"dp["<<i<<"][1] : "<<dp[i][1]<<endl;
-        if(i>2) dp[i][1] = max(dp[i][1], dp[i-2][1] + 
-                                         d2*(a[i-1]+a[i-2]) - d1);
-        cout<<"dp["<<i<<"][1] : "<<dp[i][1]<<endl;
-    }
-    cout<<(dp[n][0] < dp[n][1]? dp[n][1] : dp[n][0]);
+#define endl "\n"
+#define aku ios_base::sync_with_stdio(0);cout.tie(0);cin.tie(0);
+#define fup(i,a,b,c) for(ll i=a; i<=b; i+=c)
+#define fdown(i,a,b,c) for(ll i=a; i>=b; i-=c)
+#define fr first
+#define sc second
+#define vll vector<ll>
+#define pll pair<ll,ll>
+#define pb emplace_back
+#define pf emplace_front
+
+
+ll tc,x,y,m,n,a,b,p,q,ans,sum;
+
+void solve(){ // cout.flush() tiap output
+    cin>>n;
+    ll arr[n+3],suff[n+3]={};
+    fup(i,1,n,1) {cin>>arr[i];suff[i]=suff[i-1]+arr[i];}
+    // INPUT DONE
     
+    ll l=1,r=n,brt;
+    while(l!=n){
+        ll mid = (l+r+1)/2;
+        cout<<"? "<<mid-l+1<<" ";
+        fup(i,l,mid,1) cout<<i<<" ";
+        cout.flush();
+        
+        cin>>brt;
+        if(brt==suff[mid]-suff[l-1]) r = mid;
+        else l = mid+1;
+        
+        cout<<"l : "<<l<<" | r : "<<r<<endl; cout.flush();
+    }
+    cout<<l<<endl; cout.flush();
 }
 
 signed main(){
-    aku 
-    // cin >> tc;
-    tc=1;
-    while(tc--){
-        // cin>>n;
-        solve(0);
-    }
+    aku
+    cin>>tc;
+    // tc=1;
+    while(tc--) solve();
 }
-/*
-INPUT
-
-7 11 2
-2 4 4 5 1 2 7
-
-5 7 3
-2 0 1 2 1
-
-    */
-
-
-
-
-
-
-
-
