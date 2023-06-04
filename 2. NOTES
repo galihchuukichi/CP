@@ -44,7 +44,8 @@ adj[4].pb(1);
 std::priority_queue<int, std::vector<int>, std::greater<int>> pq;
 
 mySet.insert(); mySet.erase(val); mySet.size();
-
+vector<set<ll>>v;
+auto it = v[i].lower_bound(a); // MOST FASTER
 // ################################################## TUPLE ##################################################
 tuple<int, string, bool> myTuple(42, "hello", true);
 deque<tuple<ll,bool,string>> myDt;
