@@ -43,7 +43,7 @@ adj[4].pb(1);
 
 std::priority_queue<int, std::vector<int>, std::greater<int>> pq;
 
-mySet.insert(); mySet.erse(val); mySet.size();
+mySet.insert(); mySet.erase(val); mySet.size();
 
 // ################################################## TUPLE ##################################################
 tuple<int, string, bool> myTuple(42, "hello", true);
