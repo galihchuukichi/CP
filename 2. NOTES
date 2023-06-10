@@ -75,7 +75,14 @@ LLONG_MAX | INT_MAX
     int b = 2;
     int ans = ceil(static_cast<double>(a) / b);
     cout << ans;  // Output: 3
-    
+
+// SUBSTR
+// format myStr.substr(idx,length);
+string s = "Hello, World!";
+            0123456789012
+string sub1 = s.substr(7); // World 
+string sub2 = s.substr(0, 5); // Hello
+
 // ################################################## ERROR ##################################################
 for(ll i=0; i<=cari.size()-1; i++) cout<<i<<" "; // INI RTE
 for(ll i=0; i<=-1; i++) cout<<i<<” “; // INI AMAN
