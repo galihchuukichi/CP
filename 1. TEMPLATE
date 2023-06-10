@@ -30,7 +30,7 @@ template<typename T> inline void asd(T lx){
     return;
 }
 
-ll n,tc,t,x,y,tmp;
+ll tc,sum,ans;
 string s;
 
 void solve(int dep){
@@ -42,7 +42,6 @@ signed main(){
     // cin >> tc;
     tc=1;
     while(tc--){
-        // cin>>n;
         solve(0);
     }
 }
