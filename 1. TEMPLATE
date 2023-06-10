@@ -10,6 +10,7 @@ namespace kewajiban {
     #define vll vector<ll>
     #define pll pair<ll,ll>
     #define mpll map<ll,ll>
+    #define endl "\n"
     #define fr first
     #define sc second
     //lower_bound >= x
