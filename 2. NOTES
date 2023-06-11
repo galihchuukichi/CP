@@ -83,6 +83,14 @@ string s = "Hello, World!";
 string sub1 = s.substr(7); // World 
 string sub2 = s.substr(0, 5); // Hello
 
+// SORT STRING BY SIZE | SHORT -> LONG
+bool compareBySize(const std::string& a, const std::string& b) {
+    return a.size() < b.size();
+}
+vector<string> strings = { "a", "ab", "b" };
+sort(strings.begin(), strings.end(), compareBySize);
+atau bisa juga
+sort(strings.begin(), strings.end(), [](const std::string& a, const std::string& b) {return a.size() < b.size(); });
 // ################################################## ERROR ##################################################
 for(ll i=0; i<=cari.size()-1; i++) cout<<i<<" "; // INI RTE
 for(ll i=0; i<=-1; i++) cout<<i<<” “; // INI AMAN
