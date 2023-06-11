@@ -55,10 +55,15 @@ OUTPUT
 
 //TC SALAH
 if(tc== abc){
-    string strA,strB,strC; ll a,b,c; cin>>
-    if(tc== abc - abc){
+    string strA,strB,strC; ll a,b,c; 
+    while(tc--){
+        cin>>
+        if(tc== abc - abc){
         cout<<
+        return 0;
     }
+}
+    
 
 } else
 
