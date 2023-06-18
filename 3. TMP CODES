@@ -107,3 +107,104 @@ if(tc== abc){
     */
 
 
+
+// CF 880 DIV 2 C. k-th EQUALITY 
+#include<bits/stdc++.h>
+#pragma GCC optimize("Ofast")
+namespace kewajiban {
+    using namespace std;
+    using ll = long long;
+    using ull = unsigned long long;
+    #define aku ios_base::sync_with_stdio(0);cout.tie(0);cin.tie(0); 
+    #define dqll(myV,a) deque<ll>myV(a)
+    #define dqll2D(myV,a,b) deque<deque<ll>> myV(a,deque<ll>(b))
+    #define vll vector<ll>
+    #define pll pair<ll,ll>
+    #define mpll map<ll,ll>
+    #define endl "\n"
+    #define fr first
+    #define sc second
+    //lower_bound >= x
+    //upper_bound > x
+    #define fup(i,a,b,c) for(ll i=a; i<=b; i+=c)
+    #define fdown(i,a,b,c) for(ll i=a; i>=b; i-=c)
+    #define sp cout<<" ";
+    #define pb emplace_back
+    #define pf emplace_front
+    #define pob pop_back
+    #define pof pop_front
+    #define gcd(a,b) __gcd(a,b)
+    #define lcm(a,b) (a*(b/gcd(a,b)))
+}
+using namespace kewajiban;
+template<typename T> inline void asd(T lx){
+    std::cout << lx << endl;
+    return;
+}
+
+ll tc,sum,ans;
+string s;
+
+void solve(int dep){
+    ll A,B,C,k; cin>>A>>B>>C>>k;
+    // INPUT DONE
+    
+    if(pow(10,A-1)+pow(10,B-1)>pow(10,C)-1){
+        cout<<-1<<endl; return;
+    }
+    
+    vector<pll>v; // fr = idx || sc = L
+    ll st1 = pow(10,C-1) - pow(10,B)+1;
+    ll en = pow(10,C-1) - pow(10,B-1);
+    
+    v.pb({0,0}); v.pb({0,0});
+    fup(i,st1,en,1){
+        ll idx = v[v.size()-2].fr + pow(10,B+1) - (pow(10,C-1)-i);
+        v.pb({idx,i});    
+    }
+    v.pb({-1,-1});
+    sort(v.begin(),v.end());
+    
+    auto it = lower_bound(v.begin(),v.end(),({k,0}));
+    ll idx = it - v.begin();
+    if(*it == k){
+        cout<<v[]
+    }
+}
+
+signed main(){
+    aku 
+    cin >> tc;
+    // tc=1;
+    while(tc--){
+        
+        solve(0);
+    }
+}
+/*
+INPUT
+
+
+
+OUTPUT
+
+
+
+//TC SALAH
+if(tc== abc){
+    string strA,strB,strC; ll a,b,c; 
+    while(tc--){
+        cin>>
+        if(tc== abc - abc){
+        cout<<
+        return 0;
+    }
+}
+    
+
+} else
+
+    */
+
+
+
