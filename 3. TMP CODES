@@ -1,46 +1,109 @@
-// ELITE YELLOW #02 INTERACTIVE INPUT
+// 1779B - MKnez's ConstructiveForces Task
 #include<bits/stdc++.h>
-using namespace std;
-using ll = long long;
-#define endl "\n"
-#define aku ios_base::sync_with_stdio(0);cout.tie(0);cin.tie(0);
-#define fup(i,a,b,c) for(ll i=a; i<=b; i+=c)
-#define fdown(i,a,b,c) for(ll i=a; i>=b; i-=c)
-#define fr first
-#define sc second
-#define vll vector<ll>
-#define pll pair<ll,ll>
-#define pb emplace_back
-#define pf emplace_front
+#pragma GCC optimize("Ofast")
+namespace kewajiban {
+    using namespace std;
+    using ll = long long;
+    using ull = unsigned long long;
+    #define aku ios_base::sync_with_stdio(0);cout.tie(0);cin.tie(0); 
+    #define dqll(myV,a) deque<ll>myV(a)
+    #define dqll2D(myV,a,b) deque<deque<ll>> myV(a,deque<ll>(b))
+    #define vll vector<ll>
+    #define pll pair<ll,ll>
+    #define mpll map<ll,ll>
+    #define endl "\n"
+    #define fr first
+    #define sc second
+    //lower_bound >= x
+    //upper_bound > x
+    #define fup(i,a,b,c) for(ll i=a; i<=b; i+=c)
+    #define fdown(i,a,b,c) for(ll i=a; i>=b; i-=c)
+    #define sp cout<<" ";
+    #define pb emplace_back
+    #define pf emplace_front
+    #define pob pop_back
+    #define pof pop_front
+    #define gcd(a,b) __gcd(a,b)
+    #define lcm(a,b) (a*(b/gcd(a,b)))
+}
+using namespace kewajiban;
+template<typename T> inline void asd(T lx){
+    std::cout << lx << endl;
+    return;
+}
 
+ll tc,sum,ans[1005];
+string s;
 
-ll tc,x,y,m,n,a,b,p,q,ans,sum;
-
-void solve(){ // cout.flush() tiap output
-    cin>>n;
-    ll arr[n+3],suff[n+3]={};
-    fup(i,1,n,1) {cin>>arr[i];suff[i]=suff[i-1]+arr[i];}
-    // INPUT DONE
-    
-    ll l=1,r=n,brt;
-    while(l!=n){
-        ll mid = (l+r+1)/2;
-        cout<<"? "<<mid-l+1<<" ";
-        fup(i,l,mid,1) cout<<i<<" ";
-        cout.flush();
-        
-        cin>>brt;
-        if(brt==suff[mid]-suff[l-1]) r = mid;
-        else l = mid+1;
-        
-        cout<<"l : "<<l<<" | r : "<<r<<endl; cout.flush();
+void cari(){
+    fup(i,1,1000,1){
+        if(i&1){
+            ans[i] = 1;
+        } else 
+            ans[i] = -1;
     }
-    cout<<l<<endl; cout.flush();
+}
+
+void solve(int dep){
+    ll n; cin>>n; 
+    // iNPUT DONE
+    
+
+    
+    if(n&1){
+        if(n==3) {cout<<"NO\n"; return;}
+        ll a,b,kpk; a = (n-1)/2; b = (n-3)/2; a *= -1;
+        fup(i,1,n,1){
+            if(i&1){
+                cout<<b<<" ";
+            } else {
+                cout<<a<<" ";
+            }
+            
+        }
+        
+    } else {
+        cout<<"YES\n";
+        fup(i,1,n,1){
+            cout<<ans[i]<<" ";
+        }
+    }
+    cout<<endl;
 }
 
 signed main(){
-    aku
-    cin>>tc;
+    aku 
+    cin >> tc;
     // tc=1;
-    while(tc--) solve();
+    cari();
+    while(tc--){
+        
+        solve(0);
+    }
 }
+/*
+INPUT
+
+
+
+OUTPUT
+
+
+
+//TC SALAH
+if(tc== abc){
+    string strA,strB,strC; ll a,b,c; 
+    while(tc--){
+        cin>>
+        if(tc== abc - abc){
+        cout<<
+        return 0;
+    }
+}
+    
+
+} else
+
+    */
+
+
