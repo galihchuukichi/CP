@@ -91,6 +91,11 @@ vector<string> strings = { "a", "ab", "b" };
 sort(strings.begin(), strings.end(), compareBySize);
 atau bisa juga
 sort(strings.begin(), strings.end(), [](const std::string& a, const std::string& b) {return a.size() < b.size(); });
+
+// SORTING MAP
+map<char,ll>mp;
+map<char,ll>mySortedMap(mp.begin(),mp.end());
+
 // ################################################## ERROR ##################################################
 for(ll i=0; i<=cari.size()-1; i++) cout<<i<<" "; // INI RTE
 for(ll i=0; i<=-1; i++) cout<<i<<” “; // INI AMAN
@@ -101,6 +106,10 @@ set<pair<ll,ll>>mySet; // INI AMAN
 map<int,pair<int,int>>mp;
 if(mp[5].emtpy()) // ERROR
 if(mp.find(5) == mp.end()) // USE THIS, DONT WORRY IT'S O(log n) :)
+
+// push back vector<pll>v
+vector<pll>v; v.pb({bedH,bedM}); // INI EROR
+v.pb(bedH,bedM); // INI AMAN
 
 
 
