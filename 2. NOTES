@@ -96,6 +96,31 @@ sort(strings.begin(), strings.end(), [](const std::string& a, const std::string&
 map<char,ll>mp;
 map<char,ll>mySortedMap(mp.begin(),mp.end());
 
+// FUNGSI LAMBDA
+void solve(int dep){
+    ll a,b;
+    cin>>a>>b;
+    ll d = gcd(a,b);
+    auto p = [](ll x, ll y) -> ll{
+        ll r = 0;
+        while(x>1){
+            if(x%y)
+                return -1;
+            x/=y;
+            r++;
+        }
+        return r;
+    };
+    
+    ll x = p(a/d,3), y = p(b/d,2);
+    
+    cout<<x<<" "<<y<<endl;
+    if(x != -1 && y != -1 && x>=y)
+        asd("YES");
+    else
+        asd("NO");
+}
+
 // ################################################## ERROR ##################################################
 for(ll i=0; i<=cari.size()-1; i++) cout<<i<<" "; // INI RTE
 for(ll i=0; i<=-1; i++) cout<<i<<” “; // INI AMAN
@@ -111,5 +136,27 @@ if(mp.find(5) == mp.end()) // USE THIS, DONT WORRY IT'S O(log n) :)
 vector<pll>v; v.pb({bedH,bedM}); // INI EROR
 v.pb(bedH,bedM); // INI AMAN
 
-
+// FUNGSI LAMBDA ERROR (INT)
+// ### DI BAWAH ERROR
+ auto p = [](ll x, ll y){
+        ll r = 0;
+        while(x>1){
+            if(x%y)
+                return -1;
+            x/=y;
+            r++;
+        }
+        return r;
+    };
+// ### DI BAWAH WORKS
+ auto p = [](ll x, ll y) -> ll{
+        ll r = 0;
+        while(x>1){
+            if(x%y)
+                return -1;
+            x/=y;
+            r++;
+        }
+        return r;
+    };
 
