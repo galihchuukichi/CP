@@ -160,3 +160,17 @@ v.pb(bedH,bedM); // INI AMAN
         return r;
     };
 
+// ################################################## WRONG ANSWER ##################################################
+
+// WHEN CEILING, MAKE SURE IT IS IN LONG DOUBLE, NOT IN INTEGER/LONG LONG
+ll ans = ceil(5/2); // ans = 2;
+ll ans = ceil(5.0L / 2.0L); // ans = 3;
+
+
+// double is not enough when ceil or floor with really big decimal number, use long double
+long double a = 5;
+if(a < 10.0L) // 10.0L in long double
+  asd("YES");
+
+// ONLY APPLIED FOR QUEUE, IF IT'S EMPTY THEN THE FRONT EQUAL TO 0
+// myQueue.empty() -> myQueue.front()==0
