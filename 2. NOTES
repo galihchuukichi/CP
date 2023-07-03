@@ -121,6 +121,36 @@ void solve(int dep){
         asd("NO");
 }
 
+// LOWER BOUND / LOWER_BOUND vector<pair<ll,ll>>v; vector<pll> v;
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    std::vector<std::pair<int, int>> vec = {{1, 10}, {2, 20}, {3, 30}, {4, 40}, {5, 50}};
+
+    int key = 3; // Kunci yang dicari
+
+    // Mengurutkan vector berdasarkan kunci
+    std::sort(vec.begin(), vec.end());
+
+    // Mencari lower bound menggunakan binary search
+    auto it = std::lower_bound(vec.begin(), vec.end(), std::make_pair(key, 0));
+
+    if (it != vec.end() && it->first == key) {
+        // Elemen dengan kunci ditemukan
+        std::cout << "Elemen dengan kunci " << key << " ditemukan pada indeks " << it - vec.begin() << std::endl;
+    } else {
+        // Elemen dengan kunci tidak ditemukan
+        std::cout << "Elemen dengan kunci " << key << " tidak ditemukan." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+
 // ################################################## ERROR ##################################################
 for(ll i=0; i<=cari.size()-1; i++) cout<<i<<" "; // INI RTE
 for(ll i=0; i<=-1; i++) cout<<i<<” “; // INI AMAN
