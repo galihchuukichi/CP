@@ -190,6 +190,12 @@ v.pb(bedH,bedM); // INI AMAN
         return r;
     };
 
+// PRIORITY_QUEUE clear function
+priority_queue<ll>pq; 
+pq.clear(); // ERROR
+pqll empPq;
+swap(empPq,pq); // USE THIS INSTEAD
+
 // ################################################## WRONG ANSWER ##################################################
 
 // WHEN CEILING, MAKE SURE IT IS IN LONG DOUBLE, NOT IN INTEGER/LONG LONG
@@ -204,3 +210,11 @@ if(a < 10.0L) // 10.0L in long double
 
 // ONLY APPLIED FOR QUEUE, IF IT'S EMPTY THEN THE FRONT EQUAL TO 0
 // myQueue.empty() -> myQueue.front()==0
+
+// ################################################## FASTEST TRIKCS ##################################################
+
+priority_queue<ll>myPq; // there is no myPq.clear(); 
+// USE BELOW INSTEAD !
+priority_queue<ll>empPq;
+swap(myPq,empPq);
+
