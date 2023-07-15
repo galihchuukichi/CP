@@ -148,7 +148,14 @@ int main() {
     return 0;
 }
 
-
+// USE LOWER_BOUND BUT THE SCENARIO IS <= 
+    std::vector<int> v = {90,70,40,20,10};
+    using namespace std;
+    int value = 39;
+    auto it = std::lower_bound(v.begin(), v.end(), value, greater<int>());
+    std::cout << "Nilai <= " << value << " ditemukan di indeks: " << it-v.begin() << std::endl;
+    return 0;
+    // THE OUTPUT IS 3
 
 
 // ################################################## ERROR ##################################################
