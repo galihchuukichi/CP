@@ -218,6 +218,8 @@ if(a < 10.0L) // 10.0L in long double
 // ONLY APPLIED FOR QUEUE, IF IT'S EMPTY THEN THE FRONT EQUAL TO 0
 // myQueue.empty() -> myQueue.front()==0
 
+// WHEN YOU CALCULATE THE QUADRATIC FORMULA, USE LONG DOUBLE INSTEAD, DONT USE LONG LONG, IT'LL GET WRONG ANSWER
+
 // ################################################## FASTEST TRIKCS ##################################################
 
 priority_queue<ll>myPq; // there is no myPq.clear(); 
