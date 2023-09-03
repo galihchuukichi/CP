@@ -215,6 +215,7 @@ pq.clear(); // ERROR
 pqll empPq;
 swap(empPq,pq); // USE THIS INSTEAD
 
+cout<<(5%0); // ERROR USING MOD MODULO OPERATION % BY 0
 // ################################################## WRONG ANSWER ##################################################
 
 // WHEN CEILING, MAKE SURE IT IS IN LONG DOUBLE, NOT IN INTEGER/LONG LONG
