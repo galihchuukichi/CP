@@ -1,1 +1,85 @@
 // ############################################## ERROR ###########################################################
+
+// ERROR 00001
+/* EXPLAINATION
+Idk why, but this code below can't run like interactively. Misalnya, outputnya keluar dulu baru masukin input. Kayak user friendly gitu tapi ga bisa. 
+Jadi kita harus masukin semua input dulu baru ntar semua outputnya keluar gitu. Gatau kenapa :'( Here is the code :
+
+#include<bits/stdc++.h>
+//#pragma GCC optimize("Ofast")
+namespace kewajiban {
+    using namespace std;
+    using ll = long long;
+    using ull = unsigned long long;
+    using ld = long double;
+    #define aku ios_base::sync_with_stdio(0);cout.tie(0);cin.tie(0); 
+    #define dqll(myV,a) deque<ll>myV(a)
+    #define dqll2D(myV,a,b) deque<deque<ll>> myV(a,deque<ll>(b))
+    #define vll vector<ll>
+    #define pll pair<ll,ll>
+    #define mpll map<ll,ll>
+    #define endl "\n"
+    #define fr first
+    #define sc second
+    //lower_bound >= x
+    //upper_bound > x
+    #define fup(i,a,b,c) for(ll i=a; i<=b; i+=c)
+    #define fdown(i,a,b,c) for(ll i=a; i>=b; i-=c)
+    #define sp cout<<" ";
+    #define pb emplace_back
+    #define pf emplace_front
+    #define pob pop_back
+    #define pof pop_front
+    #define gcd(a,b) __gcd(a,b)
+    #define lcm(a,b) (a*(b/gcd(a,b)))
+}
+using namespace kewajiban;
+template<typename T> inline void asd(T lx){
+    std::cout << lx << endl;
+    return;
+}
+
+ll tc,sum,ans;
+string kata,kalimat;
+
+void solve(int dep){
+
+}
+
+signed main(){
+    aku 
+    tc=1;
+    // cin >> tc;
+    // while(tc--){
+    //     solve(0);
+    // }
+    cout<<"MASUKKAN KATA: ";
+    cin>>kata;
+    cout<<"MASUKKAN KALIMAT: "<<endl;    
+    getline(cin,kalimat);
+
+    cout<<"HASIL :\n"<<endl;
+    cout<<
+    "Jelaskan makna kata ["<<kata<<"] pada kalimat ["<<kalimat<<"] menggunakan bahasa "<<
+    "indonesia dan gaya bahasa yang menarik dan mudah dipahami untuk orang "<<
+    "awam. Terjemahkan kalimat ["<<kalimat<<"] secara keseluruhan, tidak hanya "<<
+    "berfokus pada ["<<kata<<"] saja . Berikan contoh 3 kalimat dalam "<<
+    "[BAHASA INGGRIS] yang menggunakan kata ["<<kata<<"] beserta terjemahannya "<<
+    "dalam bahasa Indonesia!";
+
+    
+    _sleep(10000);
+    cout<<"TERIMAKASIH YA :)"; 
+
+}
+
+
+TAPI CODE DIBAWAH INI, BISA RUNNING SECARA INTERAKTIF, KEA USER FRIENDLY
+
+
+
+
+
+*/
+
+
