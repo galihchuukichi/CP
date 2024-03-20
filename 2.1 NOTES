@@ -75,7 +75,29 @@ signed main(){
 
 
 TAPI CODE DIBAWAH INI, BISA RUNNING SECARA INTERAKTIF, KEA USER FRIENDLY
+#include <bits/stdc++.h>
+using namespace std;
 
+string kata,kalimat;
+
+int main(){
+    cout<<"MASUKKAN KATA-KATA: ";
+    getline(cin,kata);
+    cout<<"MASUKKAN KALIMAT: ";    
+    getline(cin,kalimat);
+
+    cout<<"HASIL :\n"<<endl;
+    cout<<
+    "Jelaskan makna kata ["<<kata<<"] pada kalimat ["<<kalimat<<"] menggunakan bahasa "<<
+    "indonesia dan gaya bahasa yang menarik dan mudah dipahami untuk orang "<<
+    "awam. Terjemahkan kalimat ["<<kalimat<<"] secara keseluruhan, tidak hanya "<<
+    "berfokus pada ["<<kata<<"] saja. Berikan contoh 3 kalimat dalam "<<
+    "[BAHASA INGGRIS] yang menggunakan kata ["<<kata<<"] beserta terjemahannya "<<
+    "dalam bahasa Indonesia!";
+
+    cin.get();
+
+}
 
 
 
