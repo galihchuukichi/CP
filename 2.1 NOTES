@@ -105,3 +105,50 @@ int main(){
 */
 
 
+
+// ERROR 00002
+Ga bisa running, trus CE. INi code error nya. GA BISA RUNNING DI NEETCODE.IO DI PROBS INI : https://neetcode.io/problems/top-k-elements-in-list
+main.cpp: In member function ‘std::vector<int> Solution::topKFrequent(std::vector<int>&, int)’:
+main.cpp:47:13: error: expected primary-expression before ‘return’
+   47 |             return a.first > b.first;
+      |             ^~~~~~
+main.cpp:47:13: error: expected ‘}’ before ‘return’
+main.cpp:46:52: note: to match this ‘{’
+   46 |         std::sort(vecPair.begin(), vecPair.end(),  {
+      |                                                    ^
+main.cpp:46:53: error: expected ‘)’ before ‘return’
+   46 |         std::sort(vecPair.begin(), vecPair.end(),  {
+      |                  ~                                  ^
+      |                                                     )
+   47 |             return a.first > b.first;
+      |             ~~~~~~                                   
+main.cpp:48:9: warning: no return statement in function returning non-void [-Wreturn-type]
+   48 |         });
+      |         ^
+
+CODE NYA INI: 
+class Solution {
+public:
+
+
+    vector<int> topKFrequent(vector<int>& nums, int k) {
+        map<int,int>hashMap;
+        for(auto i:nums){
+            hashMap[i]++;
+        }
+        vector<pair<int,int>>vecPair;
+        for(auto i:hashMap){
+            vecPair.push_back({i.second, i.first});
+            // count, number
+        }
+
+        sort(vecPair.begin(), vecPair.end(), {return a.first > b.first;});
+        
+        vector<int>ans;
+        for(int i=0; i<k; i++){            
+            ans.push_back(vecPair[i].second);    
+        }
+        return ans;
+    }
+};
+
